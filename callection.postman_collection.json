@@ -1,0 +1,467 @@
+{
+	"info": {
+		"_postman_id": "9bc86887-6b16-4169-b632-d1bf95e17f8a",
+		"name": "callection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create board",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "consumerSecret",
+							"value": "15a376f97ad7417995e89025374d33f7d020eadc18d8c8306c697bd602579382",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "f6433099a36ab3b5eb6330a1d1b2159e",
+							"type": "string"
+						},
+						{
+							"key": "tokenSecret",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?name=prueba 3&defaultLists=false",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "prueba 3"
+						},
+						{
+							"key": "defaultLists",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create lists",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "consumerSecret",
+							"value": "15a376f97ad7417995e89025374d33f7d020eadc18d8c8306c697bd602579382",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "f6433099a36ab3b5eb6330a1d1b2159e",
+							"type": "string"
+						},
+						{
+							"key": "tokenSecret",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists?name=nuevaLista1&idBoard={{boardID}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "nuevaLista1"
+						},
+						{
+							"key": "idBoard",
+							"value": "{{boardID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create card",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "consumerSecret",
+							"value": "15a376f97ad7417995e89025374d33f7d020eadc18d8c8306c697bd602579382",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "f6433099a36ab3b5eb6330a1d1b2159e",
+							"type": "string"
+						},
+						{
+							"key": "tokenSecret",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards?name=card1&desc=this is card1's description&idList={{newListID}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "card1"
+						},
+						{
+							"key": "desc",
+							"value": "this is card1's description"
+						},
+						{
+							"key": "idList",
+							"value": "{{newListID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "move card",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "consumerSecret",
+							"value": "15a376f97ad7417995e89025374d33f7d020eadc18d8c8306c697bd602579382",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "f6433099a36ab3b5eb6330a1d1b2159e",
+							"type": "string"
+						},
+						{
+							"key": "tokenSecret",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/{{newCardID}}/idList?value={{newList2ID}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"{{newCardID}}",
+						"idList"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "{{newList2ID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modify board",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "consumerSecret",
+							"value": "15a376f97ad7417995e89025374d33f7d020eadc18d8c8306c697bd602579382",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "f6433099a36ab3b5eb6330a1d1b2159e",
+							"type": "string"
+						},
+						{
+							"key": "tokenSecret",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/{{boardID}}?name=ExamenTrello&desc=Descripcion de ExamenTrello!!",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"{{boardID}}"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ExamenTrello"
+						},
+						{
+							"key": "desc",
+							"value": "Descripcion de ExamenTrello!!"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list boards",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "consumerSecret",
+							"value": "15a376f97ad7417995e89025374d33f7d020eadc18d8c8306c697bd602579382",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "f6433099a36ab3b5eb6330a1d1b2159e",
+							"type": "string"
+						},
+						{
+							"key": "tokenSecret",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/members/me/boards?",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"members",
+						"me",
+						"boards"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
