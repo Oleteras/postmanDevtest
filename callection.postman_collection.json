@@ -56,7 +56,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://api.trello.com/1/boards/?name=prueba 3&defaultLists=false",
+					"raw": "https://api.trello.com/1/boards/?name=DevTest&defaultLists=false",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -71,7 +71,7 @@
 					"query": [
 						{
 							"key": "name",
-							"value": "prueba 3"
+							"value": "DevTest"
 						},
 						{
 							"key": "defaultLists",
@@ -133,7 +133,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://api.trello.com/1/lists?name=nuevaLista1&idBoard={{boardID}}",
+					"raw": "https://api.trello.com/1/lists?name=nuevaLista1&idBoard={{devBoardId}}",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -151,7 +151,7 @@
 						},
 						{
 							"key": "idBoard",
-							"value": "{{boardID}}"
+							"value": "{{devBoardId}}"
 						}
 					]
 				}
@@ -209,7 +209,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://api.trello.com/1/cards?name=card1&desc=this is card1's description&idList={{newListID}}",
+					"raw": "https://api.trello.com/1/cards?name=card1&desc=this is card1's description&idList=60843b17af1ccb5abcffb104",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -231,7 +231,7 @@
 						},
 						{
 							"key": "idList",
-							"value": "{{newListID}}"
+							"value": "60843b17af1ccb5abcffb104"
 						}
 					]
 				}
@@ -458,6 +458,140 @@
 							"key": "",
 							"value": null
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get card",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "consumerSecret",
+							"value": "15a376f97ad7417995e89025374d33f7d020eadc18d8c8306c697bd602579382",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "f6433099a36ab3b5eb6330a1d1b2159e",
+							"type": "string"
+						},
+						{
+							"key": "tokenSecret",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/60843ef4651e3f63212a224d",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"60843ef4651e3f63212a224d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete board",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "consumerSecret",
+							"value": "15a376f97ad7417995e89025374d33f7d020eadc18d8c8306c697bd602579382",
+							"type": "string"
+						},
+						{
+							"key": "consumerKey",
+							"value": "f6433099a36ab3b5eb6330a1d1b2159e",
+							"type": "string"
+						},
+						{
+							"key": "tokenSecret",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "token",
+							"value": "074473fe33d0b8bdd9f9b372f641f75ae79a89e75b1ec144370c1aaa4df1e4b9",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/{{boardID}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"{{boardID}}"
 					]
 				}
 			},
